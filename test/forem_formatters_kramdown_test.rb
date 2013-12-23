@@ -9,9 +9,9 @@ describe Forem::Formatters::Kramdown do
 
   describe "self.format" do
     let(:plain_text) { "this is not markdown" }
-    let(:plain_html) { "<p>this is not markdown</p>" }
+    let(:plain_html) { "<p>this is not markdown</p>\n" }
     let(:markdown_text) { "test *is* **markdown**" }
-    let(:markdown_html) { "<p>test <em>is</em> <strong>markdown</strong></p>" }
+    let(:markdown_html) { "<p>test <em>is</em> <strong>markdown</strong></p>\n" }
 
     it { subject.format(plain_text).must_equal plain_html }
     it { subject.format(markdown_text).must_equal markdown_html }
